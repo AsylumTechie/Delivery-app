@@ -1,27 +1,26 @@
 const mongoose = require("mongoose");
 // const { Schema } = mongoose;
 
-const UserSchema = new mongoose.Schema({
+const ItemSchema = new mongoose.Schema({
+  CategoryName: {
+    type: String,
+    require: true,
+  },
   name: {
     type: String,
     require: true,
   },
-  location: {
+  img: {
     type: String,
     require: true,
   },
-  email: {
+  description: {
     type: String,
     require: true,
   },
-  password: {
-    type: String,
-    require: true,
-  },
-  date: {
-    type: Date,
-    Default: Date.now,
+  options: {
+    type: Array,
   },
 });
-const User = new mongoose.model("User", UserSchema);
-module.exports = User;
+const food_Item = new mongoose.model("food_Item", ItemSchema);
+module.exports = food_Item;

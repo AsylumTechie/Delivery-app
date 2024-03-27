@@ -22,7 +22,6 @@ export default function Card() {
             <h5 className="card-title">Card title</h5>
             <p className="card-text">This is some important text</p>
             <div className="container w-100">
-              {/* Render the options array here */}
               <select className="m-2 h-100  bg-success rounded">
                 {options}
               </select>
